@@ -1,31 +1,20 @@
-public class Doctor{
-    private String DrName;
-    private String DrId;
+public class Doctor extends Person{
     private String Specialty;
 
-    public Doctor(String drNamep,String drIdp,String Specialtyp)
-    {
-        this.DrName = drNamep;
-        this.DrId = drIdp;
-        this. Specialty = Specialtyp;
+    public Doctor(String name, int id, int age, String specialty) {
+        super(name, id, age);
+        Specialty = specialty;
     }
 
-    //getters
-    public String getDrName()
-    {
-
-        return this.DrName;
+    @Override
+    public void displayinfo() {
+        super.displayinfo();
+        System.out.println("Specialty: " + Specialty);
+        System.out.println("--------------");
     }
-    public String getDrId()
-    {
 
-        return this.DrId;
-    }
     public String getSpecialty()
     {
-
         return this.Specialty;
     }
-
-
 }

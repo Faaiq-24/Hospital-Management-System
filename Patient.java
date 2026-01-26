@@ -1,31 +1,19 @@
-public class Patient {
-    private String Pname;
-    private int age;
-    private String Pid;
+public class Patient extends Person {
+    private String illness;
 
-
-    public Patient(String namep,int age,String id)
-    {
-        this.Pname = namep;
-        this.age = age;
-        this.Pid = id;
-
+    public Patient(String name, int id, int age, String illness) {
+        super(name, id, age);
+        this.illness = illness;
     }
 
-    //getters
-    public String getPname()
-    {
-
-        return this.Pname;
+    @Override
+    public void displayinfo() {
+        super.displayinfo();
+        System.out.println("illness: " + illness);
+        System.out.println("--------------");
     }
-    public int getAge()
-    {
 
-        return this.age;
-    }
-    public String getPid()
-    {
-
-        return this.Pid;
+    public String getIllness() {
+        return illness;
     }
 }

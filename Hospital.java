@@ -7,10 +7,10 @@ public class Hospital {
 
 
     public Hospital(){
-        doctors = new Doctor[100];
+        doctors = new Doctor[5];
         DocCount = 0;
 
-        this.patients = new Patient[100];
+        this.patients = new Patient[5];
         this.PCount = 0;
 
 
@@ -44,8 +44,8 @@ public class Hospital {
     {
         for(int i = 0; i<DocCount;i++)
         {
-            System.out.println("Doctor Name: " + doctors[i].getDrName()+
-                                "\nDoctor id: "+doctors[i].getDrId()+
+            System.out.println("Doctor Name: " + doctors[i].getName()+
+                                "\nDoctor id: "+doctors[i].getId()+
                                 "\nDoctor Specialty: " + doctors[i].getSpecialty());
 
             System.out.println("--------------");
@@ -56,8 +56,8 @@ public class Hospital {
     {
         for(int i = 0; i<PCount;i++)
         {
-            System.out.println("Patient Name: " + patients[i].getPname()+
-                    "\nPatient id: "+patients[i].getPid()+
+            System.out.println("Patient Name: " + patients[i].getName()+
+                    "\nPatient id: "+patients[i].getId()+
                     "\nPatient Age: " + patients[i].getAge());
             System.out.println("--------------");
         }
